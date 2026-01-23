@@ -5,7 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Spinner marki;
     private ListView model;
+    private SeekBar lata;
+    private TextView rocznik;
     private ArrayList<String> modele;
     private ArrayAdapter<String> markiAdapter;
     private ArrayAdapter<String> modeleAdapter;
@@ -58,6 +62,27 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                }
+        );
+
+        lata = findViewById(R.id.lata);
+        rocznik = findViewById(R.id.rocznik);
+        lata.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener() {
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                        rocznik.setText(String.valueOf(i));
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
 
                     }
                 }

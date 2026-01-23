@@ -81,7 +81,9 @@
             android:id="@+id/rocznik"
             android:textSize="25dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="2000"/>
     </LinearLayout>
     <SeekBar
         android:id="@+id/lata"
