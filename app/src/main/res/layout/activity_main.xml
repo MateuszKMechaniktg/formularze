@@ -34,6 +34,12 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number" />
+        <TextView
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="zł"
+            android:layout_marginRight="5dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -115,11 +121,11 @@
 
         <CheckBox
             android:textSize="25dp"
-            android:id="@+id/checkBox"
+            android:id="@+id/wlasciciel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Czy pierwszy właściciel" />
+            android:text="Pierwszy właściciel?" />
     </LinearLayout>
 
     <LinearLayout
@@ -134,10 +140,12 @@
             android:layout_marginRight="60dp"/>
 
             <RadioGroup
+                android:id="@+id/historia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:checked="true"
                     android:textSize="18dp"
                     android:id="@+id/radio1"
                     android:layout_width="wrap_content"
@@ -161,11 +169,15 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/dodaj"
         android:layout_width="164dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#178017"
         android:text="Dodaj" />
+    <ListView
+        android:id="@+id/auta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
