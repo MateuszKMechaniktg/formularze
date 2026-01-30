@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                         modele.clear();
                         for(int j = 0; j < marki_lista[i].length; j++){
+
                             modele.add(marki_lista[i][j]);
                         }
                         modeleAdapter.notifyDataSetChanged();
